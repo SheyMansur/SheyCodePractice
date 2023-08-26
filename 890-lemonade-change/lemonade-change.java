@@ -1,22 +1,33 @@
 class Solution {
+    // 5 
+    // 10 --> 5
+    // 20 --> 5, 5, 5 or 10, 5
     public boolean lemonadeChange(int[] bills) {
-        int five = 0, ten = 0;
-        for (int i: bills) {
-            if (i == 5) {
-                five++;
-            } else if (i == 10) {
-                five--;
-                ten++;
-            } else if (ten > 0) {
-                ten--;
-                five--;
+        int fives = 0;
+        int tens = 0;
+        for (int bill: bills){
+            switch (bill){
+                case 5: fives++;
+                        break;
+                case 10: if (fives>0) fives--;
+                         else {
+                             System.gc();
+                             return false;
+                         }
+                         tens++;
+                         break;
+                case 20: if (tens>0 && fives>0) {
+                            tens--;
+                            fives--;
+                        }
+                        else if(fives>2) fives-=3;
+                        else{
+                            System.gc();
+                            return false;
+                        }
             }
-            else {
-                five -= 3;
-            }
-            if (five < 0) return false;
         }
+        System.gc();
         return true;
-        
     }
 }
