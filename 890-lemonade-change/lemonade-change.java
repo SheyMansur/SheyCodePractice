@@ -15,11 +15,9 @@ class Solution {
                 five -= 3;
             }
             if (five < 0) {
-                System.gc();
                 return false;
             }
         }
-        System.gc();
         return true;
         
     }
