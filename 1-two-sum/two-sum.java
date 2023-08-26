@@ -1,7 +1,8 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> h = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
             int complement = target - nums[i];
             if (h.containsKey(complement)) {
                 return new int[]{h.get(complement), i};
