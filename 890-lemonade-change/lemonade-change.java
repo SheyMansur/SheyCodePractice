@@ -3,24 +3,21 @@ class Solution {
         int fiveBills = 0;
         int tenBills = 0;
         for (int bill: bills) {
-            if (fiveBills < 0) return false;
             if (bill == 5) {
                 fiveBills++;
             } else if (bill == 10) {
                 fiveBills--;
                 tenBills++;
-            } else {
-                // bill == 20
-                if (tenBills > 0) {
-                    tenBills--;
-                    fiveBills -= 1;
-                } else {
-                    fiveBills -= 3;
-                }
-                
+            } else if (tenBills > 0) {
+                tenBills--;
+                fiveBills--;
             }
+            else {
+                fiveBills -= 3;
+            }
+            if (fiveBills < 0) return false;
         }
-        return fiveBills >= 0;
+        return true;
         
     }
 }
