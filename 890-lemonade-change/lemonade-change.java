@@ -14,8 +14,12 @@ class Solution {
             else {
                 five -= 3;
             }
-            if (five < 0) return false;
+            if (five < 0) {
+                System.gc();
+                return false;
+            }
         }
+        System.gc();
         return true;
         
     }
