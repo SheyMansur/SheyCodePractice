@@ -19,7 +19,6 @@ class Solution {
         public static int[] reverse (int []num ,int start , int end)
     {
         int j = end-1;
-        System.out.println(start);
         
         for (int i = start ; i <((end-start+1)/2)+start; i++)
         {
@@ -28,7 +27,6 @@ class Solution {
             num[j]=temp;
             j--;
         }
-        System.out.println (Arrays.toString(num));
         return num;
     }
     public void rotate(int[] nums, int k) {
