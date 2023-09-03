@@ -1,8 +1,5 @@
 class Solution {
     public boolean isSubsequence(String s, String t) {
-        if (t.equals("")) {
-            return (s.equals(""));
-        }
         int i = 0;
         int j = 0;
         while (i < s.length()) {
