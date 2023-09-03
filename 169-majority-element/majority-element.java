@@ -15,9 +15,6 @@ class Solution {
                 count.put(nums[i], 1);
             }
         }
-        for (int key : count.keySet()) {
-            System.out.println(key + "|" + count.get(key));
-        }
         return nums[index];
     }
 }
