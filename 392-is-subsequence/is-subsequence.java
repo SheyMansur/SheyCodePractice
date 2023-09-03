@@ -14,10 +14,8 @@ class Solution {
                 if (j == t.length()) {
                     return false;
                 }
-                System.out.println(i + "|" + j);
             }
             j++;
-            System.out.println("pasta");
             i++;
         }
         return true;
