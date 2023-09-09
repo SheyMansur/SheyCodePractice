@@ -12,9 +12,9 @@ class Solution {
         }
         
         int[] result = new int[set2.size()];
-        int index = 0;
-        for (int n : set2) {
-            result[index++] = n;
+        int i = 0;
+        for (int num : set2) {
+            result[i++] = num;
         }
         return result;
         
