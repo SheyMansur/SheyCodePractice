@@ -8,6 +8,7 @@ class Solution {
                 index++;
             }
         }
+        System.gc();
         return index;
     }
 }
